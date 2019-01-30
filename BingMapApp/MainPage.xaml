@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="BingMapApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BingMapApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox x:Name="AddressInput" HorizontalAlignment="Stretch" MinWidth="220"
+                   PlaceholderText="Ingresar Dirección"></TextBox>
+            <Button x:Name="Buscador" Click="Buscador_Click">
+                Buscar   
+            </Button>
+        </StackPanel>
+
+
+        <Maps:MapControl Name="myMap" Grid.Row="1"  Grid.Column="0" MapServiceToken="dJ22pIV4NdbmraunFP7b~_IZL-4m9DzLM4vXxLxCzbQ~AoBMOdQDuqq5Dbhq6vN5ZpyXy5_33mP4z3q0y_HkAYqI6drveh7wz93Vz_Xje9BC"
+                                 MapTapped="myMap_Tapped"/>
+
+    </Grid>
+
+</Page>
